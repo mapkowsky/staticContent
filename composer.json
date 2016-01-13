@@ -1,0 +1,15 @@
+{
+    "name": "m.lewandowski/static-content",
+    "license": "MIT",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.5",
+		"ext-pdo_sqlite": "*",
+        "doctrine/orm": "^2.4.8"
+    }
+}
