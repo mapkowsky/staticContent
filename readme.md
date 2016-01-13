@@ -1,3 +1,3 @@
-Za≥oøenia:
--Minimum zaleøno∂ci
--Maksymalna "reuøywalno∂Ê"
+Za≈Ço≈ºenia
+-minimum zale≈ºno≈õci
+-maksymalna "reu≈ºywalno≈õƒá"

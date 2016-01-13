@@ -15,6 +15,11 @@ abstract class Form {
 	
 	private $action;
 	
+	/**
+	 * @param object $model model to bind form data to
+	 * @param string $action action where request with form data will be handled
+	 * @throws \Exception
+	 */
 	public function __construct($model, $action = null){
 		if(!is_object($model)){
 			throw new \Exception("Model binded to form must be an object");
