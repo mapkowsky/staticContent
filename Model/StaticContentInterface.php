@@ -1,5 +1,5 @@
 <?php
-
+namespace StaticContent\Model;
 /**
  * @author m.lewandowski4
  */

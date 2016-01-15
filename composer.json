@@ -11,5 +11,8 @@
         "php": ">=5.5",
 		"ext-pdo_sqlite": "*",
         "doctrine/orm": "^2.4.8"
+    },
+	"require-dev": {
+        "phpunit/phpunit": "5.1.*"
     }
 }

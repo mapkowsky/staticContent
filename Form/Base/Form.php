@@ -24,7 +24,7 @@ abstract class Form {
 		if(!is_object($model)){
 			throw new \Exception("Model binded to form must be an object");
 		}
-		$this->model = $model;
+		$this->model = $this->prepareModel($model);
 		$this->action = $action;
 	}
 	
@@ -33,6 +33,13 @@ abstract class Form {
 	 */
 	protected abstract function getName();
 	
+	/**
+	 * Perform operations on model here if needed
+	 * must return the model object!
+	 */
+	protected abstract function prepareModel($model);
+
+
 	/**
 	 * @return string html ready to display
 	 */
