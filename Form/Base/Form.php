@@ -77,4 +77,8 @@ abstract class Form {
 		}
 	}
 	
+	function getModel() {
+		return $this->model;
+	}
+
 }

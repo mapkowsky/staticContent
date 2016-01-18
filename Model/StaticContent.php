@@ -5,7 +5,9 @@ namespace StaticContent\Model;
 /**
  * @author m.lewandowski4
  */
-class StaticContent implements StaticContent\Model\StaticContentInterface {
+class StaticContent implements \StaticContent\Model\StaticContentInterface {
+	
+	private 
 
 	public function getContent() {
 		

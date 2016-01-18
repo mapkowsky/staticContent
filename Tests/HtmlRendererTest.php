@@ -21,6 +21,7 @@ class HtmlRendererTest extends \PHPUnit_Framework_TestCase {
 	}
 
 	protected function setUp() {
+		parent::setUp();
 		if (file_exists(dirname(__FILE__) . '/htmldrenderer')) {
 			$files = glob(dirname(__FILE__) . '/htmldrenderer/*');
 			foreach ($files as $file) {
