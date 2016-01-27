@@ -5,15 +5,22 @@ namespace StaticContent\Model;
  */
 interface StaticContentInterface {
 	
-	public function getContent();
+	/**
+	 * @return RevisionInterface the current version of the content
+	 */
+	public function getRevision();
 	
-	public function setContent($content);
+	/**
+	 * @param RevisionInterface $revision set the current version of the content
+	 */
+	public function setRevision($revision);
 	
 	public function getName();
 	
-	public function setName();
+	public function setName($name);
 	
 	public function getIsEditable();
 	
-	public function setIsEditable();
+	public function setIsEditable($isEditable);
+	
 }

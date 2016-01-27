@@ -13,11 +13,17 @@ class FormBaseTest extends \PHPUnit_Framework_TestCase {
 		include '../Model/StaticContent.php';
 	}
 	
-	public function testIsEditable(){
+	public function testEditableForm(){
 		$model = new \StaticContent\Model\StaticContent();
 		$form = new \StaticContent\Form\EditableContentForm($model);
-		var_dump($form->getModel());
 		$this->assertTrue($form->getModel()->getIsEditable());
+	}
+	
+	public function testNonEditableForm(){
+		$model = new \StaticContent\Model\StaticContent();
+		$form = new \StaticContent\Form\NotEditableContentForm($model);
+		$this->assertFalse($form->getModel()->getIsEditable());
+		
 	}
 	
 }

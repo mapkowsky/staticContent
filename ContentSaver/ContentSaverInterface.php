@@ -1,5 +1,7 @@
 <?php
 
+namespace StaticContent\ContentSaver;
+
 /**
  * @author m.lewandowski4
  */

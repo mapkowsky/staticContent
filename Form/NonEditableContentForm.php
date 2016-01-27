@@ -5,10 +5,10 @@ namespace StaticContent\Form;
 /**
  * @author m.lewandowski4
  */
-class NotEditableContentForm extends Base\Form {
+class NonEditableContentForm extends Base\Form {
 
 	protected function getName() {
-		return 'notEditableContentForm';
+		return 'nonEditableContentForm';
 	}
 
 	/**

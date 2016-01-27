@@ -2,6 +2,7 @@
 namespace StaticContent\Form\Base;
 
 use StaticContent\Utils\HtmlRenderer;
+use StaticContent\Model\StaticContentInterface;
 /**
  * @author m.lewandowski4
  */
@@ -11,8 +12,6 @@ abstract class Form {
 	
 	private $model;
 	
-	private $request;
-	
 	private $action;
 	
 	/**
@@ -20,7 +19,7 @@ abstract class Form {
 	 * @param string $action action where request with form data will be handled
 	 * @throws \Exception
 	 */
-	public function __construct($model, $action = null){
+	public function __construct(StaticContentInterface $model, $action = null){
 		if(!is_object($model)){
 			throw new \Exception("Model binded to form must be an object");
 		}
@@ -56,28 +55,11 @@ abstract class Form {
 		}
 		return $html;
 	}
-	
+		
 	/**
-	 * bind request to the form and hydrate to model
-	 * @param array $request
+	 * @return StaticContentInterface
 	 */
-	public function bindRequest($request){
-		$this->request = $request;
-		$this->hydrate();
-	}
-	
-	private function hydrate(){
-		foreach(get_class_methods($model::getClass) as $method){
-			if(strpos('set', $method) === 0){
-				$propertyName = ucfirst(str_replace('set', '', $method));
-				if(isset($this->request[$propertyName])){
-					$model->$method($this->request[$propertyName]);
-				}
-			}
-		}
-	}
-	
-	function getModel() {
+	public function getModel() {
 		return $this->model;
 	}
 
